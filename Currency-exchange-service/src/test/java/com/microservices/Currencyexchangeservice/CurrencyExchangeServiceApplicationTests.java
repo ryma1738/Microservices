@@ -1,10 +1,10 @@
-package com.microservices.limitsservice;
+package com.microservices.Currencyexchangeservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LimitsServiceApplicationTests {
+class CurrencyExchangeServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,29 +1,32 @@
-package com.microservices.Currencyexchangeservice;
+package com.microservices.currencyconversionservice;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 
-@Entity(name = "currency_exchange")
-public class CurrencyExchange {
-    @Id
+
+public class CurrencyConversion {
+//    @Id
     private Long id;
-    @Column(name="currency_from")
+//    @Column(name="currency_from")
     private String from;
-    @Column(name="currency_to")
+//    @Column(name="currency_to")
     private String to;
     private BigDecimal exchangeRate;
+    private BigDecimal quantity;
+    private BigDecimal total;
     private String environment;
 
-    public CurrencyExchange() {
+    public CurrencyConversion() {
     }
 
-    public CurrencyExchange(Long id, String from, String to, BigDecimal exchangeRate) {
+    public CurrencyConversion(Long id, String from, String to, BigDecimal exchangeRate,
+                              BigDecimal quantity, BigDecimal total, String environment) {
         this.id = id;
         this.from = from;
         this.to = to;
         this.exchangeRate = exchangeRate;
+        this.quantity = quantity;
+        this.total = total;
+        this.environment = environment;
     }
 
     public Long getId() {
@@ -56,6 +59,22 @@ public class CurrencyExchange {
 
     public void setExchangeRate(BigDecimal exchangeRate) {
         this.exchangeRate = exchangeRate;
+    }
+
+    public BigDecimal getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(BigDecimal quantity) {
+        this.quantity = quantity;
+    }
+
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
     }
 
     public String getEnvironment() {
